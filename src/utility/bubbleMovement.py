@@ -20,7 +20,7 @@ def figureOutNextXnY(currentLocation: QPoint, maxX:int, maxY:int) -> tuple[int, 
     potentialX = finalX + xShift
     potentialY = finalY + yShift
 
-    isLocationFine = lambda position, maxVal:(0 > position or position > maxVal)
+    isLocationFine = lambda position, maxVal: not (0 > position or position > maxVal)
 
     finalX = potentialX if isLocationFine(potentialX, maxX) else finalX - xShift
     finalY = potentialY if isLocationFine(potentialY, maxY) else finalY - yShift
