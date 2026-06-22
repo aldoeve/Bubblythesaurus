@@ -1,9 +1,9 @@
-from PyQt6.QtWidgets import QApplication, QWidget
-from windowSetup import MainWindow
+from PyQt6.QtWidgets import QApplication
+from window.bubblyWindow import BubblyWindow
 
 app = QApplication([])
 
-window = MainWindow()
+window = BubblyWindow()
 window.show()
 
 app.exec()
